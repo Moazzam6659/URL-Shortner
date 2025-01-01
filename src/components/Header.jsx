@@ -13,12 +13,12 @@ import { LinkIcon, LogOut } from 'lucide-react'
 
 const Header = () => {
   const navigate = useNavigate()
-  const user = true
+  const user = false
 
   return (
     <nav className='py-4 flex items-center justify-between'>
       <Link to='/'>
-        <img src='/logo.png' alt='Logo' className='h-16' />
+        <img src='/logo.webp' alt='Logo' className='h-16' />
       </Link>
 
       <div>
