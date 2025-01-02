@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useFetch = (cb, options = {}) => {
+const customUseFetch = (cb, options = {}) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(null)
   const [error, setError] = useState(null)
@@ -21,4 +21,4 @@ const useFetch = (cb, options = {}) => {
   return { data, loading, error, fn }
 }
 
-export default useFetch
+export default customUseFetch

@@ -1,11 +1,12 @@
 import { createContext, useContext, useEffect } from 'react'
-import useFetch from './hooks/UseFetch'
+
 import { getCurrentUser } from './db/apiAuth'
+import customUseFetch from './hooks/Use-Fetch'
 
 const UrlContext = createContext()
 
 const UrlProvider = ({ children }) => {
-  const { data: user, loading, fn: fetchUser } = useFetch(getCurrentUser)
+  const { data: user, loading, fn: fetchUser } = customUseFetch(getCurrentUser)
 
   const isAuthenticated = user?.role === 'authenticated'
 
