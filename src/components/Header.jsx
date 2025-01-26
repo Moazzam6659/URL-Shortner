@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Links, useNavigate } from 'react-router-dom'
 import { Button } from './ui/button'
 import {
   DropdownMenu,
@@ -44,7 +44,9 @@ const Header = () => {
                 <DropdownMenuLabel>{user?.user_metadata?.name}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className='hover:cursor-pointer'>
-                  <LinkIcon /> My Links
+                  <Link to='/dashboard' className='flex'>
+                    <LinkIcon className='mr-2' /> My Links
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className='text-red-400 hover:cursor-pointer'>
                   <LogOut />
